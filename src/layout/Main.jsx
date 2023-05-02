@@ -7,9 +7,6 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <div> 
-               
-            </div>
             <Footer></Footer>
         </div>
     );
