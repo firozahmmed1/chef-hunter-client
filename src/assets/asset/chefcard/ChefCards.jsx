@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ChefCards = () => {
+    const [accepted, setAccepted] = useState(false);
+    const handleFavBotton =(btnValue)=>{
+        setAccepted(btnValue)
+        notify();
+     }
+     const notify =()=>{
+        toast('Add To Favourite')
+     }
     return (
         <div className='mt-10 lg:grid grid-cols-3 gap-6'>
             <div className="card w-full bg-base-100 shadow-xl">
@@ -12,8 +22,9 @@ const ChefCards = () => {
                     <p>Years of experience</p>
                     <p>Numbers of recipes</p>
                     <div className="card-actions">
-                        <button className="btn bg-red-400 normal-case w-full">Add To Favourite</button>
-                        <button className="btn bg-fuchsia-400 normal-case w-full">View Recipes</button>
+                        <ToastContainer></ToastContainer>
+                        <button onClick={()=>handleFavBotton(true)} className="btn bg-red-400 normal-case w-full" disabled={accepted}>Add To Favourite</button>
+                       <Link to="/chefrecipe" className="btn bg-fuchsia-400 normal-case w-full">View Recipes</Link>
                     </div>
                 </div>
             </div>
