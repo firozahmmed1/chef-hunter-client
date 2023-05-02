@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from '../components/shared/Header/Header';
 
 const Main = () => {
     return (
         <div>
-            <h1>Main Page</h1>
+            <Header></Header>
         </div>
     );
 };
