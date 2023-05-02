@@ -1,4 +1,5 @@
 import React from 'react';
+import ChefCards from '../../assets/asset/chefcard/ChefCards';
 
 const Home = () => {
     return (
@@ -20,7 +21,11 @@ const Home = () => {
                         </div>
                     </div>
                 </div> 
-         <h1>Homepage</h1>
+         <div className='ml-6 mt-20'>
+            <h1 className='font-semibold text-2xl'>Our Chefs</h1>
+            <ChefCards></ChefCards>
+         </div>
+
         </div>
     );
 };

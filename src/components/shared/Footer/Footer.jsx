@@ -7,7 +7,7 @@ const Footer = () => {
             <div>
                 <span className="footer-title">About</span>
                 <p>
-                Here at Isabel Eats, you’ll find a variety of all your favorite traditional and authentic
+                Here at EatingWell, you’ll find a variety of all your favorite traditional and authentic
                 <br /> Mexican recipes as well as Tex-Mex and Mexican-inspired dishes. The recipes reflect my experience
                 <br /> growing up as a first generation Mexican-American and the types of dishes
                 <br /> I enjoy eating. Many of the more traditional recipes are directly from my family’s kitchen,
