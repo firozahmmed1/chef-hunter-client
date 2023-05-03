@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaGithub, FaGoogle} from "react-icons/fa";
 const Login = () => {
     return (
         <div className='lg:container'>
@@ -27,10 +27,10 @@ const Login = () => {
                                 <button className="btn btn-primary normal-case">Login</button>
                             </div>
                             <div className="form-control mt-1">
-                                <button className="btn btn-outline btn-accent normal-case">Login with Google</button>
+                                <button className="btn btn-outline btn-accent normal-case"><span className='mr-1'><FaGoogle></FaGoogle></span> Login with Google</button>
                             </div>
                             <div className="form-control mt-1">
-                                <button className="btn btn-outline normal-case">Login with Github</button>
+                                <button className="btn btn-outline normal-case"><span className='mr-1'><FaGithub></FaGithub></span>Login with Github</button>
                             </div>
                         </div>
                     </div>
