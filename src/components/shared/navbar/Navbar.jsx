@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+    const navLinkActive =({isActive})=>{
+         return{
+            color: isActive ? 'green' : ''
+         }
+    }
     return (
         <div className="navbar">
             <div className="navbar-start">
@@ -18,8 +23,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                <Link to="/" className='font-medium text-xl pr-4'>Home</Link>
-                <Link to ="/blog" className='font-medium text-xl pr-4'>Blog</Link>
+                <NavLink style={navLinkActive} to="/" className='font-medium text-xl pr-4'>Home</NavLink>
+                <NavLink style={navLinkActive} to ="/blog" className='font-medium text-xl pr-4'>Blog</NavLink>
                 </ul>
             </div>
             <div className="navbar-end">
