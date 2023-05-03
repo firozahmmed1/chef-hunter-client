@@ -1,13 +1,13 @@
 import React from 'react';
 import { FaGithub, FaGoogle} from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <div className='lg:container'>
             <h1 className='text-center text-5xl font-bold mt-8'>Login now!</h1>
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    
+                <div className="hero-content flex-col lg:flex-row-reverse">         
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className="card-body">
+                        <form className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -32,7 +32,8 @@ const Login = () => {
                             <div className="form-control mt-1">
                                 <button className="btn btn-outline normal-case"><span className='mr-1'><FaGithub></FaGithub></span>Login with Github</button>
                             </div>
-                        </div>
+                            <p className='text-center'><small>No account yet? <span className='underline text-blue-600'><Link to="/registration">Sign up</Link></span></small></p>
+                        </form>
                     </div>
                 </div>
            
