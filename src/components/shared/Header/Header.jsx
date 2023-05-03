@@ -4,7 +4,7 @@ import Navbar from '../navbar/Navbar';
 
 const Header = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='lg:container lg:mx-auto'>
           <Navbar></Navbar>
            <Outlet></Outlet>
         </div>

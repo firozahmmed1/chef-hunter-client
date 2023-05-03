@@ -4,6 +4,8 @@ import Home from "../../pages/home/Home";
 import Blog from "../../pages/blog/Blog";
 import Login from "../../pages/login/Login";
 import ChefRecipe from "../../assets/asset/chefrecipe/ChefRecipe";
+import ErrorPage from "../../pages/404page/ErrorPage";
+
 
 
 
@@ -29,13 +31,14 @@ const router = createBrowserRouter([
             {
                 path:'chefrecipe',
                 element:<ChefRecipe></ChefRecipe>
-            }
-           
-
+            },
+            
         ]
     },
-   
-    
+    {
+        path:'*',
+        element:<ErrorPage></ErrorPage>
+    }
 ])
 
 export default router;
