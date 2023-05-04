@@ -18,7 +18,6 @@ const ChefCards = () => {
             .then(res => res.json())
             .then(data => setChefData(data));
     }, [])
-    console.log(chefdata);
     return (
         <div className='mt-10 lg:grid grid-cols-3 gap-6'>
             {

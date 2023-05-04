@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider';
 const Registration = () => {
     const [error, setError] =useState('');
+    const {createUser} = useContext(AuthContext);
     
+    const navigate = useNavigate();
     const handleResgistrationInfo =event=>{
         event.preventDefault() 
         const form = event.target;
@@ -10,10 +14,20 @@ const Registration = () => {
         const email=form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
-        console.log(name, email, password,photo)
         if(password.length <6){
             setError('Passworrd should be at least 6 characters')
         }
+        createUser(email, password)
+        .then(result=>{
+            const singUp = result.user;
+            console.log(singUp)
+            form.reset('')
+            navigate('/login')
+        })
+        .catch(error =>{
+            console.error(error)
+            setError(error.message)
+        })
 
     }
      
