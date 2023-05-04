@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 
-                <Link to="/login" className='font-medium text-xl pr-4'>Login</Link>
+                <NavLink style={navLinkActive} to="/login" className='font-medium text-xl pr-4'>Login</NavLink>
             </div>
         </div>
     );

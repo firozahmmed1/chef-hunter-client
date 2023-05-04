@@ -34,8 +34,9 @@ const router = createBrowserRouter([
                 element:<Registration></Registration>
             },
             {
-                path:'chefrecipe',
-                element:<ChefRecipe></ChefRecipe>
+                path:'chefrecipe/:id',
+                element:<ChefRecipe></ChefRecipe>,
+                loader: ({params})=> fetch(`https://assign-10-server-firozahmmed1.vercel.app/data/${params.id}`)
             },
             
         ]
