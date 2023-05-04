@@ -19,7 +19,6 @@ const ChefRecipe = () => {
 
     const data = useLoaderData();
     const {chef_name, chef_bio, chef_img, experiences, likes, number_of_recipe, recipe} = data;
-    console.log(recipe)
     return (
         <>
 

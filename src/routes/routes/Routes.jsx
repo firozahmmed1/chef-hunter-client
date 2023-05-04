@@ -6,6 +6,7 @@ import Login from "../../pages/login/Login";
 import ChefRecipe from "../../assets/asset/chefrecipe/ChefRecipe";
 import ErrorPage from "../../pages/404page/ErrorPage";
 import Registration from "../../pages/registration/Registration";
+import PrivateRoute from "../prvateroute/PrivateRoute";
 
 
 
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'chefrecipe/:id',
-                element:<ChefRecipe></ChefRecipe>,
+                element:<PrivateRoute><ChefRecipe></ChefRecipe></PrivateRoute>,
                 loader: ({params})=> fetch(`https://assign-10-server-firozahmmed1.vercel.app/data/${params.id}`)
             },
             
